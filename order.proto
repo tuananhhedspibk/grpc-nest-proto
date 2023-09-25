@@ -1,4 +1,4 @@
-systax = "proto3";
+syntax = "proto3";
 
 package order;
 
@@ -7,13 +7,13 @@ service OrderService {
 }
 
 message CreateOrderRequest {
-  int32 productId = 1;
-  int32 quantity = 2;
-  int32 userId = 3;
+  required int32 productId = 1;
+  required int32 quantity = 2;
+  required int32 userId = 3;
 }
 
 message CreateOrderResponse {
-  int32 status = 1;
+  required int32 status = 1;
   repeated string error = 2;
-  int32 id = 3;
+  required int32 id = 3;
 }
